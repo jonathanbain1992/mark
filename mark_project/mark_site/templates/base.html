@@ -1,0 +1,85 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+		<!--scripts / stylesheet refs here -->
+		<link rel="stylesheet" href="{% static "css/css/foundation.css" %}" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static "css/css/app.css" %}" rel="stylesheet" />
+		<link rel="stylesheet" href="{% static "css/jonathan_css.css" %}" rel="stylesheet" />
+
+		<!--fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative|Monoton|Special+Elite" rel="stylesheet">
+
+
+
+
+		<!--jquery, ajax js-->
+
+	</head>
+
+	<body style="background: black;">
+
+
+		<div class="top-bar foundation-5-top-bar" style="border-bottom: 1px solid #80cffe;">
+		  <div class="top-bar-title">
+		    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+		      <button class="menu-icon" type="button" data-toggle></button>
+		    </span>
+				<div class="logo">
+		    Athena Studios
+			</div>
+		  </div>
+		  <!-- can also use top-bar-left-->
+			<div class="top-bar-right top_menu">
+				<div id="responsive-menu" class="top_menu">
+		      <ul class="vertical medium-horizontal menu"  data-auto-height="true" data-animate-height="true">
+		         <li><a href="#"> _services</a></li>
+						  <li><a href="#">_gallery</a></li>
+							 <li><a href="#">_book</a></li>
+							 <li><a href="#">_members_login</a></li>
+		      </ul>
+				</div>
+			</div>
+		</div>
+		<div>
+		</div>
+		<div style="padding-bottom: 2em;">
+		</div>
+
+		<!-- non base html stuff here -->
+
+		{% block bodyblock %}
+		{%endblock%}
+
+
+		<!-- // end -->
+
+
+
+
+
+
+
+		<footer class="top-bar foundation-5-top-bar" style="position:fixed; bottom:0px; width:100%;">
+			<div class="grid-container">
+				<div class="grid-x">
+
+						<div class="top_menu"> Copyright Jonathan Bain 2017 </div>
+				</div>
+			</div>
+		</footer>
+
+		<script src= "{% static "css/js/vendor/jquery.js" %}"> </script>
+		<script src= "{% static "css/js/vendor/what-input.js" %}"> </script>
+		<script src= "{% static "css/js/vendor/foundation.js" %}"> </script>
+		<script src= "{% static "css/js/app.js" %}"> </script>
+
+	</body>
+
+</html>

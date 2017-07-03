@@ -19,10 +19,7 @@ from mark_project import views
 
 
 urlpatterns = [
-	url(r'^$', views.default, name='default'),
+	url(r'^$', views.default.as_view(), name='default'),
     url(r'^admin/', admin.site.urls),
     url(r'^mark_project/', include('mark_site.urls')),
 ]
-
-
-

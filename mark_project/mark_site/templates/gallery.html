@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{%load staticfiles%}
+
+
+
+{%block content%}
+
+
+<div class="grid-x">
+  <div class="large-1 cell"> </div>
+  <div class="large-10 cell" style="align:center">
+    <div class="top_menu" style="text-align:center; font-size:48px; padding:1em;"> Example Work </div>
+<div class="gallery cf" >
+
+  {% if data %}
+    {%for d in data%}
+
+    <div class="">
+        <img class=""src="{{d.image.url}}"> </img>
+      </div>
+
+    {%endfor%}
+    {%endif%}
+</div>
+</div>
+</div>
+
+
+
+{%endblock%}

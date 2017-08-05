@@ -3,20 +3,42 @@
 
 
 
-{%block bodyblock%}
+{%block content%}
 
 <div class="grid-x">
-  <div class="large-2">
-  </div>
-  <!-- all da crap go here -->
-  <div class="large-8 generic_card" style="padding: 0px;">
-    <div class="" style="float: left; padding: 10px;">
-      hello
+
+<div class="large-2 cell">
+</div>
+  <div class="large-8 generic_card cell">
+    <div class="grid-x">
+
+    <div class="large-6 cell">
+
+      <div class="homeTitle" style="text-align:center; padding:1em;"> {{data.title}}
+      </div>
+      <div class="homeMsg" style="text-align:center; padding:0em;"> {{data.info}}
+      </div>
     </div>
-    <img style="float: right; width: 40%;" src="{% static "images/sample1.jpg" %}"/>
+
+    <div class="large-6 cell">
+      <div>
+      <img style="max-width: 100%; height: auto;" src="{% static "images/sample1.jpg" %}"/>
+    </div>
   </div>
-  <div class="large-2">
+
   </div>
+</div>
+  <div class="large-2 cell">
+  </div>
+</div>
+  <!-- all da crap go here -->
+
+
+
+  <div class="large-2 cell">
+  </div>
+  </div>
+
 </div>
 
 {%endblock%}

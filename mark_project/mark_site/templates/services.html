@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+
+
+
+{%block content%}
+
+<div class="grid-x">
+
+<div class="large-2 cell">
+</div>
+  <div class="large-8 generic_card cell">
+    <div class="grid-x">
+      <!--div class="large-1 cell"> </div>
+
+    <div class="large-10 cell"-->
+
+
+
+
+
+      <div style="padding-left:2.5em; padding-right:2.5em !important; padding-bottom:4em;">
+      <div class="homeTitle" style="padding:0.5em; padding-top:0.5em;">
+        ./what we do, and what it costs.
+      </div>
+      {%if data%}
+
+        {%for d in data%}
+
+      <ul class="pricing-table">
+      <li class="title">{{d.service_name}}</li>
+      <li class="price">{{d.rate}}</li>
+      <li class="description">{{d.service_desc}}</li>
+      <li>Notes here...</li>
+
+      <li><a class="button" href="#">Book Now!</a></li>
+      </ul>
+
+
+
+
+
+
+
+      {%endfor%}
+      {%endif%}
+    </div>
+    <!--/div-->
+
+
+  <!--/div-->
+
+  </div>
+</div>
+  <div class="large-2 cell">
+  </div>
+</div>
+  <!-- all da crap go here -->
+
+
+
+  <div class="large-2 cell">
+  </div>
+  </div>
+
+</div>
+
+{%endblock%}

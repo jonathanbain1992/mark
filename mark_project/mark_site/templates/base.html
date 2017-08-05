@@ -1,5 +1,4 @@
 {% load staticfiles %}
-
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
@@ -21,6 +20,10 @@
 
 		<!--jquery, ajax js-->
 
+		<!--@TODO: change this to a local based source later on. -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="{%static "js/mark_site_ajax.js" %}"> </script>
+
 	</head>
 
 	<body style="background: black;">
@@ -39,9 +42,9 @@
 			<div class="top-bar-right top_menu">
 				<div id="responsive-menu" class="top_menu">
 		      <ul class="vertical medium-horizontal menu"  data-auto-height="true" data-animate-height="true">
-		         <li><a href="#"> _services</a></li>
-						  <li><a href="#">_gallery</a></li>
-							 <li><a href="#">_book</a></li>
+		         <li><a href=" {%url 'services'%}"> _services</a></li>
+						  <li><a href="{%url 'gallery'%}">_gallery</a></li>
+							 <li><a href="{%url 'book'%}">_book</a></li>
 							 <li><a href="#">_members_login</a></li>
 		      </ul>
 				</div>
@@ -54,7 +57,7 @@
 
 		<!-- non base html stuff here -->
 
-		{% block bodyblock %}
+		{% block content %}
 		{%endblock%}
 
 

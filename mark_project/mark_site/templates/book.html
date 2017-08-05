@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{%load staticfiles%}
+
+
+
+{%block content%}
+
+
+<div class="grid-x">
+
+<div class="large-2 cell">
+</div>
+  <div class="large-8 generic_card cell">
+    <div class="grid-x">
+      <!--div class="large-1 cell"> </div>
+
+    <div class="large-10 cell"-->
+
+
+
+
+
+      <div style="padding-left:2.5em; padding-right:2.5em !important; padding-bottom:4em;">
+      <div class="homeTitle" style="padding:0.5em; padding-top:0.5em;">
+
+
+
+        <form id="NameForm" method="post">
+          {% csrf_token %}
+          {{form.as_p}}
+
+
+
+            <input type="submit" name="submit" value="submit" />
+        </form>
+
+
+
+
+
+
+
+    </div>
+    <!--/div-->
+
+
+  <!--/div-->
+
+  </div>
+</div>
+  <div class="large-2 cell">
+  </div>
+</div>
+  <!-- all da crap go here -->
+
+
+
+  <div class="large-2 cell">
+  </div>
+  </div>
+
+</div>
+
+{%endblock%}

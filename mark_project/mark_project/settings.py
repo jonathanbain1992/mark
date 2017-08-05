@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,6 +26,7 @@ SECRET_KEY = '_c%*4ehl2562$uj@c9my&+xs!o_@-8b0vo2f8!tn5=7bpr=9uv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+SITE_ID = 1
 
 ALLOWED_HOSTS = []
 
@@ -38,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mark_site'
+    'django.contrib.sites',
+    #'photologue',
+    'sortedm2m',
+
+    'mark_site',
+
 ]
 
 MIDDLEWARE = [
@@ -53,10 +60,19 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mark_project.urls'
 
+
+#from photologue import PHOTOLOGUE_APP_DIR
+
+
+TEMPLATE_DIRS=(
+    #PHOTOLOGUE_APP_DIR,
+
+)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [], #os.path.join(BASE_DIR,"templates/"),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,9 +135,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
-
-
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [STATIC_DIR, ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = "/media/"
+
+
+
+STATICFILES_DIRS = [STATIC_DIR, MEDIA_ROOT]
